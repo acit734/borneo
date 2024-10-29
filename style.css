@@ -1,0 +1,605 @@
+
+
+html, body {
+    background-color: black;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: scroll !important;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#content {
+    width: 100%;
+    overflow: visible !important;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+#content-1 {
+    justify-content: center;
+    align-items: center;
+}
+
+#content-1::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+    z-index: 1;
+}
+
+#container-video-preview-borneo {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#video-preview-borneo {
+    height: 100%;
+}
+
+#container-teks-dan-logo-borneo {
+    position: absolute;
+    width: 500px;
+    aspect-ratio: 1/1;
+}
+
+#logo-borneo {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-image: url('data/image/logo-borneo.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+#logo-borneo::before {
+    content: "";
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('data/image/output-onlinepngtools.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: redup-terang 1s linear 0.5s infinite alternate both running;
+}
+
+#running-text {
+    font-family: borneo;
+    position: absolute;
+    top: 70%;
+    color: white;
+    width: auto;
+    z-index: 1;
+    text-align: center;
+}
+
+@keyframes redup-terang {
+    from { opacity: 1}
+    to {opacity: 0.3}
+}
+
+#request-open-in-fullscreen {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.733);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+#request-fullscreen {
+    width: 200px;
+    height: 30px;
+    background-color: rgb(54, 228, 54);
+    border: 2px solid green;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1000px rgb(54, 228, 54);
+}
+
+#logo-pandatara {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-image: url('data/image/logo-pamdatara.png');
+    width: 100px;
+    aspect-ratio: 1/1;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translate(0, -40vh);
+}
+
+#container-teks-pandatara {
+    width: 100%;
+    height: 30%;
+    background-color: white;
+    position: relative;
+}
+
+/*#container-teks-pandatara::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 25%;
+    background: linear-gradient(to bottom, transparent, black)
+}*/
+
+#teks-logo-pandatara {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    height: calc(100% - 100px);
+}
+
+#container-video-pandatara {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#container-video-pandatara::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, transparent, black)
+}
+
+#video-pandatara {
+    width: 100%;
+    transform: translate(0, -30%);
+}
+
+#container-text-about-pandatara {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+}
+
+#container-photo-about-pandatara {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-family: borneo;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    z-index: 0;
+}
+
+#container-photo-about-pandatara::after {
+    content: "";
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.589);
+}
+
+#foto-dokumentasi-pandatara {
+    width: 60%
+}
+
+#content-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+#text-about-pandatara {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    padding-top: calc(10% - 0.25vw);
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    color: white;
+    font-family: borneo;
+    margin: 0
+}
+
+#text-content-about-pandatara {
+    font-family: borneo;
+    color: white;
+}
+
+#content-3 {
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.borneo-preview-pic {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+}
+
+#cover-preview-masked {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 0) 50px, rgb(255, 255, 255) 100px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#container-borneo-images {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#container-borneo-images-layer1 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#container-borneo-images-layer1::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: none;
+    transition: background-color 0.5s ease;
+}
+
+#container-borneo-images-layer1.shows::after {
+    background-color: rgba(0, 0, 0, 0.473);
+}
+
+#container-borneo-images::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, transparent, black)
+}
+
+#borneo-button {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    position: absolute;
+    border-radius: 100px;
+    border: 2px solid white;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+#borneo-button:hover {
+    background-color: white;
+}
+
+#back-arrow-borneo-image {
+    background-image: url('data/image/icons/arrow-left.svg');
+    top: 10px;
+    left: 10px;
+    opacity: 0;
+}
+
+.icons {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+#chevron-up-borneo-images {
+    background-image: url('data/image/icons/chevron-up.svg');
+    transform: translate(0, -150px);
+}
+
+#chevron-down-borneo-images {
+    background-image: url('data/image/icons/chevron-down.svg');
+    transform: translate(0, 150px);
+}
+
+#container-lambang-provinsi {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.lambang-provinsi {
+    position: absolute;
+    width: 100px;
+    aspect-ratio: 1/1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform 0.3s ease;
+}
+
+#container-lambang-provinsi:hover {
+    transform: scale(1.1);
+}
+
+#lambang-kalteng {
+    background-image: url('data/image/lambang-provinsi/kalimantan-tengah.png');
+}
+
+#lambang-kalsel {
+    background-image: url('data/image/lambang-provinsi/kalimantan-selatan.png');
+}
+
+#lambang-kaltara {
+    background-image: url('data/image/lambang-provinsi/kalimantan-utara.png');
+}
+
+#lambang-kaltim {
+    background-image: url('data/image/lambang-provinsi/kalimantan-timur.png');
+}
+
+#lambang-kalbar {
+    background-image: url('data/image/lambang-provinsi/kalimantan-barat.png');
+}
+
+#nama-provinsi {
+    position: absolute;
+    font-size: 75px;
+    opacity: 0;
+    transition: transform 3s ease, opacity 0.3s ease;
+    transform: translate(0, -27vh);
+    text-align: center;
+}
+
+#deskripsi-provinsi {
+    position: absolute;
+    transform: translate(0, 25vh);
+    font-size: 20px;
+    opacity: 0;
+    transition: transform 3s ease, opacity 0.3s ease;
+    color: white;
+    max-width: 80vw;
+    font-family: borneo;
+    text-align: center;
+}
+
+#footer {
+    height: 25vh;
+    width: calc(100vw - 100px);
+    background-image: url('data/image/background-dayak.png');
+    background-position: bottom;
+    background-size: cover;
+    filter: brightness(0.5);
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 5px;
+}
+
+#footer::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, transparent, black);
+}
+
+.texts-footer {
+    font-family: borneo;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-follow {
+    position: relative;
+    height: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 7px;
+}
+
+.footer-sm-logo {
+    position: relative;
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+#nama-provinsi-outer {
+    color: white;
+    font-family: borneo;
+    position: absolute;
+    transform: translate(0, 30vh);
+    transition: opacity 0.3s ease;
+}
+
+#header {
+    margin:0;
+    position: fixed;
+    left:0;
+    top: 0;
+    width: 100vw;
+    height: 50px;
+    background-color: #92CF56;
+    z-index: 98;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0px 0px 5px black;
+    transition: width 0.5s ease-out, top 0.1s ease-in, left 0.1s ease-in, border-radius 0.5s ease;
+    overflow: hidden
+}
+
+#logo-borneo-header {
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+#container-things-header {
+    width: calc(100% - 50px);
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#header-link-group {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: end;
+    transition: opacity 0.5s ease;
+}
+
+@font-face {
+    font-family: borneo;
+    src: url('data/font/borneo-bold.ttf');
+}
+
+#pandatara-photo-1 {
+    height: calc(50% - 10px);
+    width: calc(70% - 10px);
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+}
+
+#pandatara-photo-2 {
+    height: calc(50% - 10px);
+    width: calc(30% - 10px);
+    position: absolute;
+    background-color: white;
+    top: 0;
+    right: 0;
+}
+
+#pandatara-photo-3 {
+    height: calc(50% - 10px);
+    width: calc(70% - 10px);
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    right: 0;
+}
+
+#pandatara-photo-4 {
+    height: calc(50% - 10px);
+    width: calc(30% - 10px);
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+}
+
+.pandatara-photo {
+    background-size: cover;
+    background-position: center;
+    transition: background-image 3s ease;
+}
+
+#preview-kalteng {
+    background-image: url("data/image/fto-fto-kalimantan/kalteng.png")
+}
+
+.footer-text {
+    z-index: 3;
+}
+
+@media (max-width: 767px) {
+    #nama-provinsi {
+        font-size: 10vw;
+    }
+
+    #deskripsi-provinsi {
+        font-size: 5vw;
+    }
+
+    #teks-logo-pandatara {
+        width: calc(100% - 100px);
+        height: auto;
+    }
+
+    #video-pandatara {
+        height: 100%;
+        width: auto;
+        transform: translate(-7%);
+    }
+
+    #text-content-about-pandatara {
+        font-size: 4vw;
+    }
+}
